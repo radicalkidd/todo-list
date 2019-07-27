@@ -39,7 +39,7 @@ This App is Built With
 EJS - HTML markup with javascript
 Bootstrap - Library used for layout 
 CSS - Page styling
-Node.js - Server-side 
+Node.js - Server-side / Params: for routing
 MongoDB - database
 Mongoose - Along with MongoDB, An Object Data Modeling Asynchronous tool used in Node JS.
 
