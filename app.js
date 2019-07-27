@@ -12,18 +12,14 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-//1. create a database
 mongoose.connect("mongodb+srv://Admin:test123@cluster0-uk7k4.mongodb.net/todolistDB", {useNewUrlParser: true});
 
-//2. create new Schema
 const itemsSchema = {
   name: String
 }
 
-//3. create new mongoose model based on the schema
 const Item = mongoose.model("Item", itemsSchema);
 
-//4. create 3 new item documents
 const item1 = new Item({
   name: "Wake Up"
 });
@@ -44,15 +40,6 @@ const listSchema = {
 }
 
 const List = mongoose.model("List", listSchema);
-
-//5. insert documents into db
-// Item.insertMany(defaultItems, function(err){
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log("Successfully Inserted documents into Items Collection")
-//   }
-// });
 
 
 app.get("/", function(req, res) {
@@ -112,7 +99,6 @@ app.get("/:customListName", function(req, res) {
         list.save();
         res.redirect("/" + customListName);
       } else {
-        //show an existing list
         res.render("list", {listTitle: foundList.name, newListItems: foundList.items})
       }
     }
