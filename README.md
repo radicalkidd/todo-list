@@ -3,13 +3,11 @@ Todo-List
 This is a todo list web application. You can either stay on the home route or make your own route for which day you'll be making the todo list for. For an example you want a todo list for work. Change your url end to "/work" and your list will be saved on that route. You can create and delete todos as you go. 
 
 
-Getting Started with MAC
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system. 
-
+Getting Started:
 Prerequisites
 
 a. In terminal > project folder directory "npm install boostrap ejs express lodash mongoose" to install dev-dependencies 
-b. To see the mongoDB shell you need to install it.
+b. To use the mongoDB shell you need to install it.
     Mongo Shell with HomeBrew installation guide: https://treehouse.github.io/installation-guides/mac/mongo-mac.html
     Install and Run MongoDB with Homebrew
 
